@@ -24,6 +24,16 @@ body{font-family:"Noto Sans JP",sans-serif;background:#F6F5F1;color:#17241D;line
 .hero h1{font-family:"Zen Kaku Gothic New",sans-serif;font-size:clamp(26px,4.5vw,34px);font-weight:900;line-height:1.45}
 .hero h1 .mk{background:linear-gradient(transparent 62%,rgba(52,199,123,.45) 62%)}
 .hero .lead{font-size:14.5px;color:#4C5A51;margin-top:12px}
+.declare{background:#fff;border:2px solid #167C52;border-radius:16px;padding:26px 26px 22px;margin-bottom:18px;text-align:center}
+.declare .l1{font-family:"Zen Kaku Gothic New",sans-serif;font-size:clamp(24px,4.2vw,32px);font-weight:900;line-height:1.5}
+.declare .l1 b{color:#167C52;background:linear-gradient(transparent 62%,rgba(52,199,123,.4) 62%)}
+.declare .l2{font-size:14px;color:#4C5A51;margin-top:10px}
+.flow{display:flex;justify-content:center;align-items:stretch;gap:10px;margin-top:18px;flex-wrap:wrap}
+.fl{flex:1 1 150px;max-width:190px;background:#F2F7F0;border:1px solid #CDE3D6;border-radius:12px;padding:16px 12px;text-align:center}
+.fl .n{font-family:Inter,"Noto Sans JP",sans-serif;font-size:13px;font-weight:800;color:#167C52;letter-spacing:.1em}
+.fl .w{font-family:"Zen Kaku Gothic New",sans-serif;font-size:26px;font-weight:900;margin-top:4px}
+.fl .d{font-size:12px;color:#4C5A51;margin-top:4px;line-height:1.6}
+.fl-ar{align-self:center;font-size:20px;color:#167C52;font-weight:900}
 .lesson{display:block;background:#fff;border:1px solid #E3E2DC;border-left:5px solid #167C52;border-radius:14px;padding:20px 22px;margin-bottom:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
 .lesson:hover{transform:translateY(-2px);border-color:#167C52}
 .lesson .chip{display:inline-block;font-family:"Inter","Noto Sans JP",sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;color:#fff;background:#167C52;border-radius:6px;padding:3px 12px}
@@ -62,6 +72,18 @@ body{font-family:"Noto Sans JP",sans-serif;background:#F6F5F1;color:#17241D;line
   <div class="hero">
     <h1>AIに頼むとき、<span class="mk">ここを見返す</span>。</h1>
     <p class="lead">50代の店舗経営者が、実際にAIを動かして学んだ「まかせ方」をレッスンにまとめました。実話で学ぶのが、一番早い。全部のレッスンに、実際にやった記録（note）がついています。</p>
+  </div>
+
+  <div class="declare">
+    <div class="l1">読んで・真似して、<b>AIにまかせられる</b>ようになる。</div>
+    <div class="l2">このサイトは「学び場」です。実話で学んで、手順を真似て、あなたのGensparkで動かす——その3ステップの真ん中を担当します。</div>
+    <div class="flow">
+      <div class="fl"><div class="n">STEP 1</div><div class="w">読む</div><div class="d">noteの実話で<br>何が起きたか知る</div></div>
+      <div class="fl-ar">→</div>
+      <div class="fl"><div class="n">STEP 2</div><div class="w">学ぶ</div><div class="d">このサイトの手順で<br>やり方を真似る</div></div>
+      <div class="fl-ar">→</div>
+      <div class="fl"><div class="n">STEP 3</div><div class="w">試す</div><div class="d">自分のGensparkで<br>実際に動かす</div></div>
+    </div>
   </div>
 
   <a class="lesson" href="lesson1.html">
