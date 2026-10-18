@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>まかせるAI GAKU｜AIの学び場（非公認ファンメディア運営）</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;800&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans JP",sans-serif;background:#F6F5F1;color:#17241D;line-height:1.85;padding:24px 14px 48px}
+.app{max-width:760px;margin:0 auto}
+.hdr{background:#0E3D2B;color:#fff;border-radius:16px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.hdr .logo{font-family:"Zen Kaku Gothic New",sans-serif;font-size:26px;font-weight:900;letter-spacing:2px}
+.hdr .logo b{color:#3FD68F}
+.hdr .tag{font-size:11.5px;color:rgba(255,255,255,.65);letter-spacing:1px}
+.sisters{background:#1A1D23;border-radius:12px;padding:9px 18px;margin-bottom:16px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.sisters span{color:#F5A623;font-weight:700;letter-spacing:.05em}
+.sisters a{color:#fff;text-decoration:none}
+.sisters a b{font-weight:800}
+.sisters a small{opacity:.7;font-weight:400}
+.hero{background:#fff;border:1px solid #E3E2DC;border-radius:16px;padding:30px 28px;margin-bottom:18px}
+.hero h1{font-family:"Zen Kaku Gothic New",sans-serif;font-size:clamp(26px,4.5vw,34px);font-weight:900;line-height:1.45}
+.hero h1 .mk{background:linear-gradient(transparent 62%,rgba(52,199,123,.45) 62%)}
+.hero .lead{font-size:14.5px;color:#4C5A51;margin-top:12px}
+.lesson{display:block;background:#fff;border:1px solid #E3E2DC;border-left:5px solid #167C52;border-radius:14px;padding:20px 22px;margin-bottom:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.lesson:hover{transform:translateY(-2px);border-color:#167C52}
+.lesson .chip{display:inline-block;font-family:"Inter","Noto Sans JP",sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;color:#fff;background:#167C52;border-radius:6px;padding:3px 12px}
+.lesson .meta{font-size:12px;color:#8A958E;margin-left:10px;font-weight:700}
+.lesson h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:19px;font-weight:900;margin-top:10px;line-height:1.5}
+.lesson p{font-size:13.5px;color:#4C5A51;margin-top:8px}
+.lesson .go{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:800;color:#167C52}
+.prband{background:#101318;border-radius:14px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:22px 0}
+.prband .l{color:#fff;font-size:14px;font-weight:700}
+.prband .l small{display:block;font-size:10.5px;color:rgba(255,255,255,.55);letter-spacing:2px;margin-bottom:4px}
+.prband a{background:#F5A623;color:#14161c;font-weight:900;font-size:14px;padding:11px 24px;border-radius:999px;text-decoration:none}
+.noteband{background:#fff;border:1px dashed #C9C4B8;border-radius:14px;padding:16px 22px;margin-bottom:18px;font-size:13.5px;color:#4C5A51}
+.noteband a{color:#167C52;font-weight:800}
+.ftr{font-size:11px;color:#8A958E;text-align:center;line-height:1.9;margin-top:10px}
+.back{display:inline-block;font-size:13px;font-weight:800;color:#167C52;text-decoration:none;margin-bottom:14px}
+.art{background:#fff;border:1px solid #E3E2DC;border-radius:14px;padding:24px 26px;margin-bottom:14px}
+.art h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:20px;font-weight:900;padding-bottom:10px;border-bottom:2px solid #167C52;margin-bottom:14px}
+.art h3{font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;font-weight:900;margin:16px 0 6px}
+.art p,.art li{font-size:14px;color:#33413A}
+.art ul{margin:6px 0 0 1.25em}
+.art li{margin-bottom:7px}
+.art .tip{background:#EDF7F1;border-radius:10px;padding:12px 16px;font-size:13px;color:#1E5C41;margin-top:14px}
+.art .warn{background:#FFF6E3;border-radius:10px;padding:12px 16px;font-size:13px;color:#8a5d00;margin-top:14px}
+</style></head><body>
+<div class="app">
+  <div class="hdr">
+    <div class="logo">まかせるAI <b>GAKU</b></div>
+    <div class="tag">AIの学び場・非公認ファンメディア運営</div>
+  </div>
+  <div class="sisters"><span>姉妹サイト</span>
+    <a href="https://gp20190917-beep.github.io/makaseru-ai-life/"><b>まかせるAI生活</b><small>｜Gensparkのまかせ方</small></a>
+    <a href="https://gp20190917-beep.github.io/ai-wire/"><b>まかせるAI WIRE</b><small>｜AIニュース集約</small></a>
+    <a href="https://gp20190917-beep.github.io/ai-play/"><b>まかせるAI PLAY</b><small>｜ゲーム置き場</small></a>
+  </div>
+
+  <div class="hero">
+    <h1>AIに頼むとき、<span class="mk">ここを見返す</span>。</h1>
+    <p class="lead">50代の店舗経営者が、実際にAIを動かして学んだ「まかせ方」をレッスンにまとめました。実話で学ぶのが、一番早い。全部のレッスンに、実際にやった記録（note）がついています。</p>
+  </div>
+
+  <a class="lesson" href="lesson1.html">
+    <span class="chip">LESSON 1</span><span class="meta">約3分</span>
+    <h2>まずは無料で試す——クレジットの仕組み</h2>
+    <p>毎日もらえるクレジットの数・生涯の上限・モデルの倍率で減り方が変わる話。最初にここを押さえると、使うときに迷わない。</p>
+    <span class="go">読む →</span>
+  </a>
+
+  <a class="lesson" href="lesson2.html">
+    <span class="chip">LESSON 2</span><span class="meta">約4分</span>
+    <h2>Chrome拡張機能で、AIに画面を任せる</h2>
+    <p>AIがあなたのブラウザを直接操作する仕組みと、得意・不得意。「だいたい」は任せて、細かいところは人間が見る、という分担の作り方。</p>
+    <span class="go">読む →</span>
+  </a>
+
+  <a class="lesson" href="lesson3.html">
+    <span class="chip">LESSON 3</span><span class="meta">約5分</span>
+    <h2>予約投稿をAIに任せる手順（SocialDog編）</h2>
+    <p>実際に2日がかった手順の記録。本文・画像・日時まで任せる流れと、つまずく3つのポイント、止めどころの見極め方。</p>
+    <span class="go">読む →</span>
+  </a>
+
+  <a class="lesson" href="lesson4.html">
+    <span class="chip">LESSON 4</span><span class="meta">約3分</span>
+    <h2>よくある失敗と、直し方</h2>
+    <p>数字の読み間違い・時刻入力の壁・クレジットの食い方——実際に起きた失敗を4つ、直し方つきで。失敗は減らすより、直せるようにする。</p>
+    <span class="go">読む →</span>
+  </a>
+
+  <div class="prband">
+    <div class="l"><small>PR</small>このサイトで学んだことを、まずは無料で試す。</div>
+    <a href="https://www.genspark.ai/?via=ecf7wgn" target="_blank" rel="sponsored noopener">Gensparkを無料ではじめる →</a>
+  </div>
+
+  <div class="noteband">実際にAIにまかせた記録（実話）は、noteで読めます → <a href="https://note.com/makaseru_ai50" target="_blank" rel="noopener">まかせるAI生活（note）</a></div>
+
+  <div class="ftr">当サイトはAIエージェント「Genspark」の非公認ファンメディアが運営しています。Genspark社とは無関係です。<br>紹介リンクには広告（PR）を含みます。内容は2026年10月時点の運営者の利用環境で確認したものです。</div>
+</div>
+</body></html>

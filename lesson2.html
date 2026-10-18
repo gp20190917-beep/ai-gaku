@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 2｜Chrome拡張機能で、AIに画面を任せる｜まかせるAI GAKU</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;800&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans JP",sans-serif;background:#F6F5F1;color:#17241D;line-height:1.85;padding:24px 14px 48px}
+.app{max-width:760px;margin:0 auto}
+.hdr{background:#0E3D2B;color:#fff;border-radius:16px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.hdr .logo{font-family:"Zen Kaku Gothic New",sans-serif;font-size:26px;font-weight:900;letter-spacing:2px}
+.hdr .logo b{color:#3FD68F}
+.hdr .tag{font-size:11.5px;color:rgba(255,255,255,.65);letter-spacing:1px}
+.sisters{background:#1A1D23;border-radius:12px;padding:9px 18px;margin-bottom:16px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.sisters span{color:#F5A623;font-weight:700;letter-spacing:.05em}
+.sisters a{color:#fff;text-decoration:none}
+.sisters a b{font-weight:800}
+.sisters a small{opacity:.7;font-weight:400}
+.hero{background:#fff;border:1px solid #E3E2DC;border-radius:16px;padding:30px 28px;margin-bottom:18px}
+.hero h1{font-family:"Zen Kaku Gothic New",sans-serif;font-size:clamp(26px,4.5vw,34px);font-weight:900;line-height:1.45}
+.hero h1 .mk{background:linear-gradient(transparent 62%,rgba(52,199,123,.45) 62%)}
+.hero .lead{font-size:14.5px;color:#4C5A51;margin-top:12px}
+.lesson{display:block;background:#fff;border:1px solid #E3E2DC;border-left:5px solid #167C52;border-radius:14px;padding:20px 22px;margin-bottom:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.lesson:hover{transform:translateY(-2px);border-color:#167C52}
+.lesson .chip{display:inline-block;font-family:"Inter","Noto Sans JP",sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;color:#fff;background:#167C52;border-radius:6px;padding:3px 12px}
+.lesson .meta{font-size:12px;color:#8A958E;margin-left:10px;font-weight:700}
+.lesson h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:19px;font-weight:900;margin-top:10px;line-height:1.5}
+.lesson p{font-size:13.5px;color:#4C5A51;margin-top:8px}
+.lesson .go{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:800;color:#167C52}
+.prband{background:#101318;border-radius:14px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:22px 0}
+.prband .l{color:#fff;font-size:14px;font-weight:700}
+.prband .l small{display:block;font-size:10.5px;color:rgba(255,255,255,.55);letter-spacing:2px;margin-bottom:4px}
+.prband a{background:#F5A623;color:#14161c;font-weight:900;font-size:14px;padding:11px 24px;border-radius:999px;text-decoration:none}
+.noteband{background:#fff;border:1px dashed #C9C4B8;border-radius:14px;padding:16px 22px;margin-bottom:18px;font-size:13.5px;color:#4C5A51}
+.noteband a{color:#167C52;font-weight:800}
+.ftr{font-size:11px;color:#8A958E;text-align:center;line-height:1.9;margin-top:10px}
+.back{display:inline-block;font-size:13px;font-weight:800;color:#167C52;text-decoration:none;margin-bottom:14px}
+.art{background:#fff;border:1px solid #E3E2DC;border-radius:14px;padding:24px 26px;margin-bottom:14px}
+.art h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:20px;font-weight:900;padding-bottom:10px;border-bottom:2px solid #167C52;margin-bottom:14px}
+.art h3{font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;font-weight:900;margin:16px 0 6px}
+.art p,.art li{font-size:14px;color:#33413A}
+.art ul{margin:6px 0 0 1.25em}
+.art li{margin-bottom:7px}
+.art .tip{background:#EDF7F1;border-radius:10px;padding:12px 16px;font-size:13px;color:#1E5C41;margin-top:14px}
+.art .warn{background:#FFF6E3;border-radius:10px;padding:12px 16px;font-size:13px;color:#8a5d00;margin-top:14px}
+</style></head><body>
+<div class="app">
+  <div class="hdr">
+    <div class="logo">まかせるAI <b>GAKU</b></div>
+    <div class="tag">AIの学び場・非公認ファンメディア運営</div>
+  </div>
+  <div class="sisters"><span>姉妹サイト</span>
+    <a href="https://gp20190917-beep.github.io/makaseru-ai-life/"><b>まかせるAI生活</b><small>｜Gensparkのまかせ方</small></a>
+    <a href="https://gp20190917-beep.github.io/ai-wire/"><b>まかせるAI WIRE</b><small>｜AIニュース集約</small></a>
+    <a href="https://gp20190917-beep.github.io/ai-play/"><b>まかせるAI PLAY</b><small>｜ゲーム置き場</small></a>
+  </div>
+
+  <a class="back" href="index.html">← レッスン一覧へ戻る</a>
+  <div class="art">
+    <span class="chip" style="display:inline-block;font-family:Inter,'Noto Sans JP',sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;color:#fff;background:#167C52;border-radius:6px;padding:3px 12px">LESSON 2</span><span class="meta" style="font-size:12px;color:#8A958E;margin-left:10px;font-weight:700">約4分</span>
+    <h2>Chrome拡張機能で、AIに画面を任せる</h2>
+    
+<p>Gensparkの<strong>Chrome拡張機能</strong>を入れると、AIがあなたのブラウザの画面を直接操作できるようになります。新しい窓を開くのではなく、<strong>いま開いている画面そのもの</strong>を任せられるのが特徴です。</p>
+<h3>何ができる</h3>
+<ul>
+<li>管理画面の操作（予約・設定・入力の繰り返し作業）</li>
+<li>画面の数字を読み取っての分析</li>
+<li>フォーム入力やファイルの添付</li>
+</ul>
+<h3>得意と、苦手</h3>
+<ul>
+<li><strong>得意</strong>：「だいたいの流れ」——本文を入れて、画像を添付して、次へ進む、は手際が良い</li>
+<li><strong>苦手</strong>：細かいUI操作（特に時刻入力・カレンダー）——矢印を押しても別の欄が動くことがある</li>
+<li><strong>読み間違い</strong>：画面の文字は読めていても、数字の「並び」を読み違えることがある</li>
+</ul>
+<h3>分担の作り方</h3>
+<p>一番うまくいった分担は、<strong>「ボタンを押すのはAI、止めるのは人間」</strong>。AIに流れを任せて、人間は変な動きをした瞬間に止める。これが一番速くて、壊れない。</p>
+<div class="warn">注意：IDやパスワードはAIに渡しません（教える必要もない）。最終確認と、止める判断は人間の仕事です。</div>
+  </div>
+
+  <div class="prband">
+    <div class="l"><small>PR</small>読んだら、まずは無料で試す。</div>
+    <a href="https://www.genspark.ai/?via=ecf7wgn" target="_blank" rel="sponsored noopener">Gensparkを無料ではじめる →</a>
+  </div>
+  <div class="noteband">このレッスンのもとになった実話 → <a href="https://note.com/makaseru_ai50" target="_blank" rel="noopener">まかせるAI生活（note）</a></div>
+
+  <div class="ftr">当サイトはAIエージェント「Genspark」の非公認ファンメディアが運営しています。Genspark社とは無関係です。<br>紹介リンクには広告（PR）を含みます。内容は2026年10月時点の運営者の利用環境で確認したものです。</div>
+</div>
+</body></html>
